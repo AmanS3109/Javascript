@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM manipulation</title>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <h1>Learning DOM</h1>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        #box{
+            height: 100px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+    <div id="box">
+
+    </div>
+    <script>
+        console.log(document.documentElement);  //root node
+        var a = document.querySelector("h1"); //selecting query from html into js
+        var box = document.getElementById("box");
+        box.textContent = "<h1>NEWTON</h1>";
+        console.log(a);
+        box.addEventListener("click", function(){
+            box.innerHTML = "<h1>GENIUS</h1>";
+        })
+        a.addEventListener("click", function(){    //Event Listener
+            a.innerHTML = "Albert Einstein"; //changing HTML
+            a.style.color = "blue"; //changing CSS
+            a.style.backgroundColor = "lightblue";
+        })
+    </script>
+</body>
+</html>

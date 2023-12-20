@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script>
+        let counter = 0; //Declaring variable counter
+        function count(){ 
+            counter++;
+            document.querySelector('h1').innerHTML = counter;
+            //alert(counter); 
+            // const heading = document.querySelector("h1"); 
+            // if(heading.innerHTML === "Hello!"){
+            //     heading.innerHTML = "GoodBYE!";
+            // }else{
+            //     heading.innerHTML = "Hello!"; //selecting query from html into js
+            // }
+        }    
+    
+    </script>
+</head>
+<body>
+    <!--<h1>Hello!</h1>-->
+    <h1>0</h1>
+    <button onclick="count()">Count</button> 
+</body>
+</html>
