@@ -13,19 +13,32 @@ const array2 = ['z', 'y', 'x'];
 //     }
 //     return false;
 // }
-//O(a*b)
+//O(a*b) - TIME COMPLEXITY
+//O(1) - SPACE COMPLEXITY
 
 //EFFICIENT SOLUTION
 
 function containsCommonItem2(arr1, arr2){
     //loop through array1 and create object where property === items in the array
-    //loop through array2 and check if the items in the array2 is there or not in the created object
+    
      let map = {};
      for (let i = 0; i < arr1.length; i++) {
-        if(!map[i]){
-           
+        if(!map[arr1[i]]){
+           const item = arr1[i]
+           map[item] = true;
         }
         
      }
+//loop through array2 and check if the items in the array2 is there or not in the created object
+      for (let j = 0; j < arr1.length; j++){
+         if (map[arr2[j]]){
+            return true;
+         }
+      }
+      return false;
 }
-console.log(containsCommonItem(array1, array2));
+console.log(containsCommonItem2(array1, array2));
+
+//O(a+b) -TIME COMPLEXITY
+//O(a) -SPACE COMPLEXITY
+
