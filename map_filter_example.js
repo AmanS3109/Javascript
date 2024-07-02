@@ -52,7 +52,7 @@ const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // console.log(newArray)
 
 //inbuilt solution
-// const newArr = array.filter((arr) => arr % 2 == 0)
+// const newArr = array.filter((array) => array % 2 == 0)
 // console.log(newArr)
 
 // filter from scratch
