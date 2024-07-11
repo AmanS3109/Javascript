@@ -15,12 +15,10 @@ function async2(){
     })
 }
 console.log("fetching data1")
-let p1 = async1()
-p1.then((res) => {
+async1().then((res) => {
     console.log("promise fulfilled", res)
     console.log("fetching data2")
-    let p2 = async2()
-    p2.then((res) => {
+    async2().then((res) => {              // promise chaining
         console.log("promise fulfilled", res)
     })
 })
